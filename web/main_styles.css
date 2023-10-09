@@ -1,33 +1,49 @@
+/* Main Div Attributes */
 main {
     text-align: center;
-    background-image: linear-gradient(#FFB336, #FF7A36, #FF366E);
+    /* background-image: linear-gradient(#FFB336, #FF7A36, #ff366fe0); */
+    background-image: linear-gradient(#FFB336, #FF7A36, #ce0097);
 }
 
-img {
-    /* border: solid 1px;   
-    border-radius: 7px;             add border curvature */
+/* Rectangular Images */
+#profile, #previous-photo {
+    border: solid 1px;   
+    border-radius: 11px;    /* adds border curvature       */
 }
 
+/* Circular Images */
+#camera-btn, #upload-img {
+    border: solid 1px;   
+    border-radius: 100px;    /* adds border curvature       */
+}
+
+/* Heading Class Attributes */
 .heading {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%; 
+    padding-right: 5%;
 }
 
+/* Login Class Attributes */
 .login {
     display: flex;
     flex-direction: row;
 }
 
+/* Camera Class Attributes */
 .camera {
     background-color: black;
     color: white;
     padding: 13%; 
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    margin-left: 0.75%;
+    margin-right: 0.75%;
 }
 
+/* Footing Class Attributes */
 .footing {
     display: flex;
     flex-direction: row;
