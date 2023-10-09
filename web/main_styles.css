@@ -1,8 +1,7 @@
 /* Main Div Attributes */
 main {
     text-align: center;
-    /* background-image: linear-gradient(#FFB336, #FF7A36, #ff366fe0); */
-    background-image: linear-gradient(#FFB336, #FF7A36, #ce0097);
+    background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
 }
 
 /* Rectangular Images */
@@ -18,6 +17,12 @@ main {
     border-radius: 100px;    /* adds border curvature       */
     background-color: black;
 }
+
+/* Image Hover Modifyers */
+img:hover {
+    background-color: grey;
+    border-color: #36454F; 
+} 
 
 /* Heading Class Attributes */
 .heading {
