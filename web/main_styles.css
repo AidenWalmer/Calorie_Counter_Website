@@ -9,12 +9,14 @@ main {
 #profile, #previous-photo {
     border: solid 1px;   
     border-radius: 11px;    /* adds border curvature       */
+    background-color: black;
 }
 
 /* Circular Images */
 #camera-btn, #upload-img {
     border: solid 1px;   
     border-radius: 100px;    /* adds border curvature       */
+    background-color: black;
 }
 
 /* Heading Class Attributes */
