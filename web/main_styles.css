@@ -1,0 +1,28 @@
+main {
+    text-align: center;
+    background-image: linear-gradient(#FFB336, #FF7A36, #FF366E);
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    padding-bottom: 1%;
+}
+
+
+
+.camera {
+    background-color: black;
+    color: white;
+    padding: 15%; 
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.footing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1%;
+}
