@@ -18,11 +18,28 @@ main {
     background-color: black;
 }
 
-/* Image Hover Modifyers */
-img:hover {
-    background-color: grey;
-    border-color: #36454F; 
-} 
+/* Clickable Image Hover Modifyers */
+.hover:hover {
+    opacity: 0.7;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
 
 /* Heading Class Attributes */
 .heading {
