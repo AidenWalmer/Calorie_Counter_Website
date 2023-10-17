@@ -1,45 +1,9 @@
-/* Main Div Attributes */
-main {
+/* Body Tag Attributes */
+body {
     text-align: center;
     background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
+    margin: auto;
 }
-
-/* Rectangular Images */
-#profile, #previous-photo {
-    border: solid 1px;   
-    border-radius: 11px;    /* adds border curvature       */
-    background-color: black;
-}
-
-/* Circular Images */
-#camera-btn, #upload-img {
-    border: solid 1px;   
-    border-radius: 100px;    /* adds border curvature       */
-    background-color: black;
-}
-
-/* Clickable Image Hover Modifyers */
-.hover:hover {
-    opacity: 0.7;
-}
-
-/* Add Animation */
-.modal-content, #caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-  }
 
 /* Heading Class Attributes */
 .heading {
@@ -73,5 +37,74 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
+}
+
+/* Rectangular Images */
+#profile, #previous-photo {
+    border: solid 1px;   
+    border-radius: 11px;    /* adds border curvature       */
+    background-color: black;
+}
+
+/* Circular Images */
+#camera-btn, #upload-image {
+    border: solid 1px;   
+    border-radius: 100px;    /* adds border curvature       */
+    background-color: black;
+}
+
+/* Footer Images, NOT INCLUDING the Camera Shot Image */
+#previous-photo, #upload-image {
+    margin-top: 0.5%;
+}
+
+/* Clickable Image Hover Modifyers */
+.hover:hover {
+    opacity: 0.7;
+}
+
+/* Add Animation */
+.animation {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
+/* Dynamic Sizing For Mobile Phone View: */
+@media only screen and (max-width: 600px) {
+    body {
+        height: 100vh;
+    }
+    .heading {
+        margin-top: 5%;
+    }
+    .camera {
+        height: 55vh;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    #logo {
+        width: 36%; 
+    }
+    #upload-image, #profile, #previous-photo {
+        width: 13%;
+    }
+    #upload-image, #previous-photo {
+        margin-top: 2.5%;
+    }
+    #camera-btn {
+        width: 18%;
+    }
 }
