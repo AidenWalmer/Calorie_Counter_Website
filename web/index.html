@@ -24,7 +24,17 @@
         <div class="footing">
             <img id="previous-photo" title="Previous Photos" width="4%" height="4%" class="hover" src="http://localhost/capstone/Calorie_Counter_Website/web/images/image.png" alt="Previous Photos">
             <img id="camera-btn" title="Camera Button" width="5%" height="5%" class="animation" src="http://localhost/capstone/Calorie_Counter_Website/web/images/circle.png" alt="Camera Button">
+            <!-- Opens the native camera -->
+            <!-- <input id="cameraFileInput" type="file" accept="image/*" capture="environment"/> -->
+            <!-- Displays the picture uploaded from the native camera
+            <img id="pictureFromCamera" /> -->
+              <!-- The `label` is attached to the hidden file input -->
+        <label for="cameraFileInput">
             <img id="upload-image" title="Image Upload" width="4%" height="4%" class="hover" src="http://localhost/capstone/Calorie_Counter_Website/web/images/up-loading.png" alt="Image Upload">
+  
+            <!-- The hidden file `input` for opening the native camera -->
+            <input id="cameraFileInput" type="file" accept="image/*" capture="environment"/>
+        </label>
         </div>
     </main>
     

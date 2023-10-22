@@ -70,7 +70,7 @@ body {
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
-  }
+}
   
   @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
@@ -81,6 +81,16 @@ body {
     from {transform:scale(0)} 
     to {transform:scale(1)}
   }
+
+#cameraFileInput {
+    display: none;
+}
+
+#pictureFromCamera {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+}
 
 /* Dynamic Sizing For Mobile Phone View: */
 @media only screen and (max-width: 600px) {
