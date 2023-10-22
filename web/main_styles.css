@@ -7,43 +7,60 @@ body {
 
 /* Heading Class Attributes */
 .heading {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center; */
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 5%; 
     padding-right: 5%;
+} 
+
+/* Heading Image Spacing */
+.profile-div {
+    padding-left: 75%;
 }
 
-/* Login Class Attributes */
-.login {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Camera Class Attributes */
-.camera {
-    background-color: black;
-    color: white;
-    padding: 13%; 
+/* Image Class Attributes */
+.camera-div {
+    /* background-color: black; */
+    color: white; 
+    border: solid 3pt; 
+    border-color: black;
+    padding: 12%; 
     margin-left: 0.75%;
     margin-right: 0.75%;
 }
 
+#pictureFromCamera {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+}
+
 /* Footing Class Attributes */
 .footing {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     padding-top: 1%;
     padding-bottom: 2%;
+}
+
+/* Footing Image Spacing */
+.camera-btn-div {
+    padding-left: 22%;
+    padding-right: 22%;
+}
+
+/* CLICKABLE Image Attributes */
+.profile-div, .camera-btn-div, .upload-img-div {
+    display: inline;
 }
 
 /* Rectangular Images */
 #profile, #previous-photo {
     border: solid 1px;   
-    border-radius: 11px;    /* adds border curvature       */
+    border-radius: 11px;    /* adds border curvature */  
+    border-color: black;    
     background-color: black;
 }
 
@@ -65,11 +82,11 @@ body {
 }
 
 /* Add Animation */
-.animation {  
+.animation:active {  
     -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
+    -webkit-animation-duration: 0.1s;
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: 0.1s;
 }
   
   @-webkit-keyframes zoom {
@@ -84,12 +101,6 @@ body {
 
 #cameraFileInput {
     display: none;
-}
-
-#pictureFromCamera {
-    width: 100%;
-    height: auto;
-    margin-top: 16px;
 }
 
 /* Dynamic Sizing For Mobile Phone View: */
