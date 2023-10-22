@@ -16,6 +16,17 @@ function init() {
        btnElement.classList.add('hover');
     });
 
+
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+    togglePassword.addEventListener('click', () => {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        togglePassword.classList.toggle('fa-eye-slash');
+    });
+
     /* Store values of username and password then prompt the login function  */
     function authenticate() {
         let password = document.getElementById('password').value;
@@ -49,7 +60,7 @@ function loginStatus() {
     else {
         console.log('Incorrect username and password!');
         // Error Message reveal 
-        let errorDiv = document.getElementById("errorDiv");
+        let errorDiv = document.getElementById("error-div");
         errorDiv.classList.remove("hidden");
 
         // Red styliziation around username/password field 
@@ -64,5 +75,8 @@ function loginStatus() {
         }
         `;
         document.head.appendChild(style);
+
+        // Clear Password Field
+        document.getElementById('password').value = '';
     }
 }

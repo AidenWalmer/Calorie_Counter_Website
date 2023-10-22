@@ -6,30 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Counter Login</title>
+    <link rel="Calorie Counter Icon" href="../web/images/Calorie_Counter_Symbol_CU.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="login_styles.css">
     <script src="login_func.js"></script>
-
 </head>
 
 <body>
     <div id="main">
         <h1>Profile Login</h1>
-            <div id="errorDiv" class="hidden">
+            <div id="error-div" class="hidden">
                 <label>Incorrect Username or Password!<hr id="errorHr"></label>
-            </div>
+            </div> 
         <label id="usernameLabel">Username:</label><br>
         <input id="username" placeholder="Type your username">
         <br>
         <br>
         <label id="passwordLabel">Password:</label><br>
-        <input id="password" type="password" placeholder="Type your password">
-        <br>
-        <div id="memberDiv">
-            <a id="member"
+        <div id="password-div">
+            <input id="password" type="password" placeholder="Type your password">
+            <i class="far fa-eye" id="togglePassword"></i>
+        </div>
+        <div id="forgot-div">
+            <a id="forgot"
                 href="file:///C:/xampp/htdocs/capstone/Calorie_Counter_Website/web/index.html">
-                Login as a Guest</a>
+                Forgot Password?
+            </a>
         </div>
         <button>LOGIN</button>
+        <hr>
+        <div id="guest-div">
+            <p id="account">Don't have an account?</p>
+            <a id="member"
+                href="file:///C:/xampp/htdocs/capstone/Calorie_Counter_Website/web/index.html">
+                Guest Login
+            </a>
+        </div>
     </div>
 </body>
 

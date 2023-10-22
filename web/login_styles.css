@@ -1,27 +1,29 @@
 /* Background Attributes */
 body { 
     background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
+    margin: 0%
 }
-  
+
 /* Main Div Attributes */ 
 #main {
     background-color: white;     
     width: 250px;
     height: 375px;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;
 
     border-radius: 20px;            /* add border curvature */
     margin: auto;                   /* center div */
     margin-top: 10%;                /* add extra space from top of page (center to screen) */
     margin-bottom: 12%;             /* add extra space from the bottom of page (center to screen) */
 
-    padding-bottom: 10px;           /* add extra white space between button and div border */
+    padding-bottom: 25px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
     padding-right: 50px;            /* white space between div contents and div border */
 }
 
 /* Login Header Attributes */
 h1 {
-    font-family: Tahoma, Verdana, sans-serif;
     text-align: center;             /* center h1 text */
     padding-top: 40px;              /* add extra space between top of the oage and LOGIN */
     margin-bottom: 30px;            /* add extra space between LOGIN and username box */
@@ -29,26 +31,34 @@ h1 {
 
 /* Input Boxes Attributes */
 input {
-    font-family: Tahoma, Verdana, sans-serif;
     width: 225px;                   /* width of the input boxes */
     padding: 10px;                  /* white space between input text and border */ 
 }
 
-/* Username and Password label Attributes */
-label {
-    font-family: Tahoma, Verdana, sans-serif;
-    font-size: 13px;                
+/* Toggle Password Icon Position */
+#togglePassword {
+    position: relative;
+    right: -225px;
+    top: -27px;
 }
 
-/* Hyperlink Attributes */
-#member {
-    font-family: Tahoma, Verdana, sans-serif;
-    font-size: 13px;
+/* Forgot Password Div Attributes */
+#forgot-div {
+    font-size: 12px;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
-#memberDiv {
-    margin-top: 10px;
-    margin-bottom: 15px;
+/* Account <p> Tag Text */
+#account {
+    display: inline
+}
+
+/* Guest Sign In Div Attributes */
+#guest-div {
+    font-size: 12px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -67,6 +77,9 @@ button {
     font-weight: bold; 
     text-align: center;
 
+    margin-top: 10px;
+    margin-bottom: 20px;
+
     border: 2px solid black; 
     border-radius: 18px;
 
@@ -78,7 +91,7 @@ button {
     padding: 10px;
     /* background-image: linear-gradient(to right, cyan, #BF40BF);  CYAN TO MAGENTA GRADIENT */ 
     background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
-} 
+}
 
 /* Button Modifyers */
 button:hover {
@@ -91,9 +104,9 @@ button:hover {
 button:focus {
     outline-offset: 2px;
 }
-
+   
 /* Error Div Attributes */
-#errorDiv {
+#error-div {
     color: red;
     font-weight: bold;
     text-align: center;
@@ -110,10 +123,6 @@ button:focus {
 /* Hidden Class */
 .hidden {
     display: none;
-}
-
-body {
-    margin: 0%;
 }
 
 @media only screen and (max-width: 400px) {
