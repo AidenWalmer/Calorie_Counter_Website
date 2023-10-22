@@ -3,6 +3,7 @@ body {
     text-align: center;
     background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
     margin: auto;
+    font-family: Tahoma, Verdana, sans-serif;
 }
 
 /* Heading Class Attributes */
@@ -17,11 +18,6 @@ body {
     padding-right: 5%;
 } 
 
-/* Heading Image Spacing */
-.profile-div {
-    padding-left: 75%;
-}
-
 /* Image Class Attributes */
 .camera-div {
     /* background-color: black; */
@@ -33,6 +29,7 @@ body {
     margin-right: 0.75%;
 }
 
+/* Imported Photo From Camera Roll */
 #pictureFromCamera {
     width: 100%;
     height: auto;
@@ -45,10 +42,9 @@ body {
     padding-bottom: 2%;
 }
 
-/* Footing Image Spacing */
-.camera-btn-div {
-    padding-left: 22%;
-    padding-right: 22%;
+/* Heading Image Spacing */
+.profile-div {
+    padding-left: 80%;
 }
 
 /* CLICKABLE Image Attributes */
@@ -71,7 +67,13 @@ body {
     background-color: black;
 }
 
-/* Footer Images, NOT INCLUDING the Camera Shot Image */
+/* Footing Image Spacing */
+.camera-btn-div {
+    padding-left: 22%;
+    padding-right: 22%;
+}
+
+/* Footing Images, NOT INCLUDING the Camera Shot Image */
 #previous-photo, #upload-image {
     margin-top: 0.5%;
 }
