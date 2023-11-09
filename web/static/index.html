@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Counter</title>
+    <link rel="Calorie Counter Icon" href="../web/images/Calorie_Counter_Symbol_CU.png">
+    <link rel="stylesheet" href="main_styles.css">
+    <script src="main_func.js"></script>
+</head>
+<body>
+    <!-- Main -->
+    <main>
+        <div class="heading">
+            <img id="logo" title="Logo" width="14%" height="10%" src="images/Calorie_Counter_Logo.png" alt="Logo">
+            <div class="profile-div">
+                <a href="file:///C:/xampp/htdocs/capstone/Calorie_Counter_Website/web/login.html">
+                    <img id="profile" title="Profile" width="5%" height="5%" class="hover" src="images/user.png" alt="Profile" roll="Button">
+                </a>
+            </div>
+        </div>
+
+        <div class="camera-div">
+            <!-- Displays the picture uploaded from the native camera -->
+            <img id="pictureFromCamera">
+            <h1 id="camera">Upload Image or Take Picture</h1>
+        </div>
+
+        <div class="footing">
+            <img id="previous-photo" title="Previous Photos" width="4%" height="4%" class="hover" src="images/image.png" alt="Previous Photos">
+            
+            <div class="camera-btn-div">
+                <img id="camera-btn" title="Camera Button" width="5%" height="5%" class="hover animation" src="images/circle.png" alt="Camera Button">
+            </div>
+            
+            <div class="upload-img-div">
+                <label for="cameraFileInput">
+                <img id="upload-image" title="Image Upload" width="4%" height="4%" class="hover" src="images/up-loading.png" alt="Image Upload">
+                <input id="cameraFileInput" type="file" accept="image/*" capture="environment">
+                </label>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
