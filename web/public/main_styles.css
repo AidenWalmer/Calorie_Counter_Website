@@ -20,7 +20,7 @@ body {
 
 /* Image Class Attributes */
 .camera-div {
-    /* background-color: black; */
+    background-color: black;
     color: white; 
     border: solid 3pt; 
     border-color: black;

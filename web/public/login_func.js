@@ -55,7 +55,7 @@ function login(username, password) {
 function loginStatus() {
     if (loggedIn) {
         console.log("Profile Session: " + loggedIn);
-        window.location.href = "file:///C:/xampp/htdocs/capstone/Calorie_Counter_Website/web/index.html";
+        window.location.href = "http://localhost:8080/index.html";
     }
     else {
         console.log('Incorrect username and password!');
