@@ -67,15 +67,41 @@ body {
     background-color: black;
 }
 
+/* Upload Selected Image Attributes */
+#selected-image-upload {
+    color: black;
+    font-size: 12px;
+    font-weight: bold; 
+    text-align: center;
+
+    border: 3px solid black; 
+    border-radius: 18px;
+
+    width: 180px;
+    padding: 10px;
+    background-image: linear-gradient(#ffbf36, #ff8d36, #ff7f1d, #ff4d00ef);
+}
+
+/* Upload Selected Image Attributes */
+#selected-image-upload:hover {
+    background-image: linear-gradient(#ffd16e, #ffa560, #ff9b4f, #ff7337ef);  
+} 
+
 /* Footing Image Spacing */
 .camera-btn-div {
     padding-left: 22%;
     padding-right: 22%;
 }
 
-/* Footing Images, NOT INCLUDING the Camera Shot Image */
+/* Footing Images Margins, NOT INCLUDING Upload Selected Image OR Camera Shot Image */
 #previous-photo, #upload-image {
     margin-top: 0.5%;
+}
+
+/* Selected Image Upload position */
+#selected-image-upload {
+    position: relative;
+    top: -20px;
 }
 
 /* Clickable Image Hover Modifyers */
