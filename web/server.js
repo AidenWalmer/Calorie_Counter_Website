@@ -27,7 +27,7 @@ app.post('/profile-upload-single', upload.single('cameraFileInput'), function (r
   console.log(JSON.stringify(req.file))
   var response = '<a href="/">Home</a><br>'
   response += "Files uploaded successfully.<br>"
-  response += '<img src="${req.file.path}" /><br>'
+  response += `<img src="${req.file.path}" /><br>`
   return res.send(response)
 })
 
