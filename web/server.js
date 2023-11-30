@@ -25,10 +25,14 @@ app.post('/profile-upload-single', upload.single('cameraFileInput'), function (r
   // req.file is the `profile-file` file
   // req.body will hold the text fields, if there were any
   console.log(JSON.stringify(req.file))
-  var response = '<a href="/">Home</a><br>'
-  response += "Files uploaded successfully.<br>"
-  response += `<img src="${req.file.path}" /><br>`
-  return res.send(response)
+  // var response = '<a href="/">Home</a><br>'
+  // response += "Files uploaded successfully.<br>"
+  // response += `<img src="${req.file.path}" /><br>`
+  // return res.send(response)
+
+  return res.status(200).json({
+    image_url: req.file.path
+  });
 })
 
 app.use(express.urlencoded({extended: true}));  // for application/x-www-form-urlencoded
