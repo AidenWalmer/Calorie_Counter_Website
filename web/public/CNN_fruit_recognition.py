@@ -71,7 +71,7 @@ def load_images_from_folder(folder,only_path = False, label = ""):
         return path
 
 images = []
-drip = "C:/Users/Aiden/Documents/github/Calorie_Counter_Website/Fruit"
+dirp = "C:/Users/Aiden/Documents/github/Calorie_Counter_Website/Fruit"
 for f in os.listdir(dirp):
     # Checks if any filename in the directory (including its subdirectories) contains "png"
     if any("png" in filename for filename in os.listdir(dirp+f)):
