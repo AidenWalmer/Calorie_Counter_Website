@@ -16,7 +16,7 @@ import random
 import time
 import gc
 
-# Delete this later!
+# Save model image data in log files! Include parameters (batch side/layers/data size/other training info)
 
 # from IPython.display import Markdown, display # For Jupyter Notebook
 from PIL import Image
