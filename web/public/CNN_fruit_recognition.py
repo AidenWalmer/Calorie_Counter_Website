@@ -49,7 +49,6 @@ from keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 from keras.applications.inception_v3 import InceptionV3
 from keras.preprocessing.image import ImageDataGenerator as IDG
 
-
 def printmd(string):   
     # display(Markdown(string)) for Jupyter Notebook
     print(string)
@@ -73,7 +72,7 @@ def load_images_from_folder(folder,only_path = False, label = ""):
         return path
 
 images = []
-dirp = "C:/Users/Aiden/Documents/github/Calorie_Counter_Website/Fruit"
+dirp = "C:/Users/Aiden/Documents/github/Calorie_Counter_Website/Fruit/"
 for f in os.listdir(dirp):
     # Checks if any filename in the directory (including its subdirectories) contains "png"
     if any("png" in filename for filename in os.listdir(dirp+f)):
@@ -246,7 +245,7 @@ callbacks = [EarlyStopping(monitor='val_loss', patience=10),
              ModelCheckpoint(filepath='best_model.h5', monitor='val_loss', save_best_only=True)]
 
 # Training the CNN model, epochs: iterations 
-model.fit(X_train, y_train, batch_size=128, epochs=50, callbacks=callbacks, validation_split = 0.1, verbose = 1)
+model.fit(X_train, y_train, batch_size=128, epochs=20, callbacks=callbacks, validation_split = 0.1, verbose = 1)
 hists.append(model.history.history)
 
 

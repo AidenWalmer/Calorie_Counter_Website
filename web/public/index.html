@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Counter</title>
-    <link rel="Calorie Counter Icon" href="http://localhost:8080/images/Calorie_Counter_Symbol_CU.png">
+    <title>Calorie Capture</title>
+    <link rel="Calorie Capture Icon" href="http://localhost:8080/images/Calorie_Counter_Symbol_CU.png">
     <link rel="stylesheet" href="main_styles.css">
     <script src="main_func.js"></script>
 </head>
 <body>
     <!-- Main -->
     <main>
-        <div class="heading">
+        <div class="heading" title="">
             <img id="logo" title="Logo" width="14%" height="10%" src="images/Calorie_Counter_Logo.png" alt="Logo">
             <div class="profile-div">
                 <a href="http://localhost:8080/login.html">
@@ -28,7 +28,12 @@
         </div>
 
         <div class="footing">
-            <img id="previous-photo" title="Previous Photos" width="4%" height="4%" class="hover" src="images/image.png" alt="Previous Photos">
+            <div class="previous-photo-div">
+                <input type="file" id="previous-photo-input" style="display: none;">
+                <label for="previous-photo-input">
+                    <img id="previous-photo" title="Previous Photos" width="4%" height="4%" class="hover" src="images/image.png" alt="Previous Photos", roll="Button">
+                </label>
+            </div>
             
             <!-- Camera Snap Picture Button -->
             <!-- <div class="camera-btn-div">

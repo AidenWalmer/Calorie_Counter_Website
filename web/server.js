@@ -1,5 +1,9 @@
 const express = require("express");
 const multer = require("multer");
+
+const fs = require('fs');
+const path = require('path');
+
 const port = 8080;
 
 const app = express();
@@ -18,28 +22,37 @@ var storage = multer.diskStorage({
 })
 var upload = multer({ storage: storage })
 
+// Places the uploaded file into the 'uploads' folder
 app.use(express.static(__dirname + '/public'));
 app.use('/uploads', express.static('uploads'));
 
+// Uploads a single image from the cameraFileInput on the client side
 app.post('/profile-upload-single', upload.single('cameraFileInput'), function (req, res, next) {
-  // req.file is the `profile-file` file
-  // req.body will hold the text fields, if there were any
   console.log(JSON.stringify(req.file))
-  // var response = '<a href="/">Home</a><br>'
-  // response += "Files uploaded successfully.<br>"
-  // response += `<img src="${req.file.path}" /><br>`
-  // return res.send(response)
-
   return res.status(200).json({
     image_url: req.file.path
   });
 })
 
+// Previous Photos Button: Displays images in the uploads directory 
+app.get('/get-images', function(req, res) {
+  const uploadsDirectory = path.join(__dirname, '/uploads');
+  fs.readdir(uploadsDirectory, function(err, files) {
+      if (err) {
+          console.log(err);
+          res.status(500).send('Error reading uploads directory');
+      } else {
+          const imageFiles = files.filter(file => file.endsWith('.jpg') || file.endsWith('.png')); // adjust as needed
+          res.send(imageFiles);
+      }
+  });
+});
+
 app.use(express.urlencoded({extended: true}));  // for application/x-www-form-urlencoded
 app.use(express.json());    // for applcation/json
 app.use(multer().none());   // for multipart/form-data (required with from data)
 
-// Display which port the server is running on 
+// Displays which port the server is running on 
 app.listen(port,() => console.log("Server running on port " + port + "!")); 
 
 

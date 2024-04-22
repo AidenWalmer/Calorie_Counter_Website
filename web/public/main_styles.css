@@ -24,16 +24,24 @@ body {
     color: white; 
     border: solid 3pt; 
     border-color: black;
-    padding: 12%; 
+    width: 1505px;
+    height: 450px;
     margin-left: 0.75%;
     margin-right: 0.75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.camera-div h1 {
+    width: auto;
 }
 
 /* Imported Photo From Camera Roll */
 #pictureFromCamera {
-    width: 100%;
+    width: auto;
     height: auto;
-    margin-top: 16px;
 }
 
 /* Footing Class Attributes */
@@ -48,7 +56,7 @@ body {
 }
 
 /* CLICKABLE Image Attributes */
-.profile-div, .camera-btn-div, .upload-img-div {
+.profile-div, .camera-btn-div, .upload-img-div, .previous-photo-div {
     display: inline;
 }
 
