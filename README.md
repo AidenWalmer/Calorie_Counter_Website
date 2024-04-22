@@ -12,7 +12,7 @@ This website allows users to upload a picture of their plate to the site and the
 pip install -r requirements.txt
 ```
 
-### Starting the Server
+**Starting the Server**
 ```
 npx nodemon server.js
 ```
