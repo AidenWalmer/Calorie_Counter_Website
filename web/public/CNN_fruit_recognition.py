@@ -245,7 +245,7 @@ callbacks = [EarlyStopping(monitor='val_loss', patience=10),
              ModelCheckpoint(filepath='best_model.h5', monitor='val_loss', save_best_only=True)]
 
 # Training the CNN model, epochs: iterations 
-model.fit(X_train, y_train, batch_size=128, epochs=20, callbacks=callbacks, validation_split = 0.1, verbose = 1)
+model.fit(X_train, y_train, batch_size=128, epochs=25, callbacks=callbacks, validation_split = 0.1, verbose = 1)
 hists.append(model.history.history)
 
 
