@@ -34,16 +34,34 @@ app.post('/profile-upload-single', upload.single('cameraFileInput'), function (r
   });
 })
 
-// Previous Photos Button: Displays images in the uploads directory 
+// Previous Photos Button: Displays images in the uploads directory in order of recency (most -> least)
 app.get('/get-images', function(req, res) {
-  const uploadsDirectory = path.join(__dirname, '/uploads');
+  const uploadsDirectory = path.join(__dirname, 'uploads');
   fs.readdir(uploadsDirectory, function(err, files) {
       if (err) {
           console.log(err);
           res.status(500).send('Error reading uploads directory');
       } else {
           const imageFiles = files.filter(file => file.endsWith('.jpg') || file.endsWith('.png')); // adjust as needed
-          res.send(imageFiles);
+          Promise.all(imageFiles.map(file => {
+              return new Promise((resolve, reject) => {
+                  fs.stat(path.join(uploadsDirectory, file), (err, stats) => {
+                      if (err) {
+                          reject(err);
+                      } else {
+                          resolve({file, mtime: stats.mtime});
+                      }
+                  });
+              });
+          }))
+          .then(files => {
+              files.sort((a, b) => b.mtime - a.mtime);
+              res.send(files.map(file => file.file));
+          })
+          .catch(err => {
+              console.log(err);
+              res.status(500).send('Error reading file stats');
+          });
       }
   });
 });

@@ -43,29 +43,62 @@
     }
 
     function displayUploadsInPopup() {
-        fetch('/get-images')
-        .then(response => response.json())
-        .then(images => {
-            // Create a pop-up window
-            const popup = window.open('', '', 'width=600,height=600');
-            images.forEach(image => {
-                // Create a div element for each image
-                const div = popup.document.createElement('div');
-                // Create an img element for each image
-                const img = popup.document.createElement('img');
-                img.src = '/uploads/' + image; // adjust the path as needed
-                img.style.width = '100px'; // adjust as needed
-                img.style.height = '100px'; // adjust as needed
-                // Create a label for each image
-                const label = popup.document.createElement('p');
-                label.textContent = image;
-                // Add the img and label elements to the div
-                div.appendChild(img);
-                div.appendChild(label);
-                // Add the div element to the pop-up window
-                popup.document.body.appendChild(div);
+    //     fetch('/get-images')
+    //     .then(response => response.json())
+    //     .then(images => {
+    //         // Create a pop-up window
+    //         const popup = window.open('', '', 'width=600,height=600');
+    //         images.forEach(image => {
+    //             // Create a div element for each image
+    //             const div = popup.document.createElement('div');
+    //             // Create an img element for each image
+    //             const img = popup.document.createElement('img');
+    //             img.src = '/uploads/' + image; // adjust the path as needed
+    //             img.style.width = '100px'; // adjust as needed
+    //             img.style.height = '100px'; // adjust as needed
+    //             // Create a label for each image
+    //             const label = popup.document.createElement('p');
+    //             label.textContent = image;
+    //             // Add the img and label elements to the div
+    //             div.appendChild(img);
+    //             div.appendChild(label);
+    //             // Add the div element to the pop-up window
+    //             popup.document.body.appendChild(div);
+    //         });
+    //     });
+    // }
+            fetch('/get-images')
+            .then(response => response.json())
+            .then(images => {
+                // Create a pop-up window
+                const popup = window.open('', '', 'width=2000,height=2000');    // Pop up size
+                // Create a container for the images
+                const container = popup.document.createElement('div');
+                container.style.display = 'grid';
+                container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))'; // Grid image sizes
+                container.style.gridGap = '50px';         // Space between images
+                images.forEach(image => {
+                    // Create a div element for each image
+                    const div = popup.document.createElement('div');
+                    div.style.border = '1px solid black'; // Border around images
+                    // Create an img element for each image
+                    const img = popup.document.createElement('img');
+                    img.src = '/uploads/' + image; 
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    // Create a label for each image
+                    const label = popup.document.createElement('p');
+                    label.textContent = image;
+                    label.style.fontSize = '12px';        // Label font size
+                    // Add the img and label elements to the div
+                    div.appendChild(img);
+                    div.appendChild(label);
+                    // Add the div element to the container
+                    container.appendChild(div);
+                });
+                // Add the container to the pop-up window
+                popup.document.body.appendChild(container);
             });
-        });
     }
 
     function checkStatus(response) {
