@@ -11,6 +11,21 @@ const app = express();
 // Indicates that all static files are in the static folder
 app.use(express.static('public'));
 
+// Deletes all images from the Uploads directory on start up
+app.get('/clear-uploads', (req, res) => {
+  fs.readdir('uploads', (err, files) => {
+      if (err) throw err;
+
+      for (const file of files) {
+          fs.unlink(path.join('uploads', file), err => {
+              if (err) throw err;
+          });
+      }
+  });
+
+  res.send('Uploads cleared');
+});
+
 // Use multer to allow image to be placed in file
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
