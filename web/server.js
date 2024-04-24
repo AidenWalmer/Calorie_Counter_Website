@@ -49,6 +49,37 @@ app.post('/profile-upload-single', upload.single('cameraFileInput'), function (r
   });
 })
 
+
+// // Instantaneous Training!!!
+// const { spawn } = require('child_process');
+
+// app.post('/profile-upload-single', upload.single('cameraFileInput'), function (req, res, next) {
+//   console.log(JSON.stringify(req.file));
+
+//   // Spawn a new python process and run the CNN_uploaded_image.py script
+//   const python = spawn('python', ['./public/CNN_uploaded_image.py', req.file.path]);
+
+//   // Collect data from the script
+//   let scriptOutput = '';
+//   python.stdout.on('data', (data) => {
+//     scriptOutput += data.toString();
+//   });
+
+//   // Handle any errors from the script
+//   python.stderr.on('data', (data) => {
+//     console.error(`Python error: ${data}`);
+//   });
+
+//   // Respond to the client when the script finishes
+//   python.on('close', (code) => {
+//     console.log(`Python script finished with code ${code}`);
+//     res.status(200).json({
+//       image_url: req.file.path,
+//       script_output: scriptOutput,
+//     });
+//   });
+// });
+
 // Previous Photos Button: Displays images in the uploads directory in order of recency (most -> least)
 app.get('/get-images', function(req, res) {
   const uploadsDirectory = path.join(__dirname, 'uploads');
