@@ -54,6 +54,7 @@
         .then(images => {
             // Create a pop-up window
             const popup = window.open('', '', 'width=2000,height=2000');    // Pop up size
+            popup.document.title = 'Previous Uploads';                      // Pop up title
             // Create a container for the images
             const container = popup.document.createElement('div');
             container.style.display = 'grid';
