@@ -16,3 +16,5 @@ pip install -r requirements.txt
 ```
 npx nodemon server.js
 ```
+**ETOWN SCAD 2024:**
+![Calorie Capture SCAD Poster 2024](https://github.com/user-attachments/assets/7bfbe45e-f2b1-4344-b86f-4495145823ea)
