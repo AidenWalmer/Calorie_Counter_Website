@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ### Starting the Server:
-* Need to go into the web folder, then invoke server.js.
+* Go into the web folder and invoke server.js to start running.
 
 **In terminal:**
 ```
