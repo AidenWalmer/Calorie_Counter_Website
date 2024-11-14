@@ -23,11 +23,3 @@ pip install -r requirements.txt
 cd web
 npx nodemon server.js
 ```
-
-### Open the Calorie Capture Website:
-* Copy/paste (Cntr c + Cntr v) or type in the website url into the search bar to open the site.
-
-**In Google Chrome:**
-```
-http://localhost:8080/index.html
-```
