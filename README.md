@@ -17,5 +17,6 @@ pip install -r requirements.txt
 
 **Starting the Server:**
 ```
+cd web
 npx nodemon server.js
 ```
