@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ### Starting the Server:
 * Need to go into the web folder, then invoke server.js.
 
-** In terminal:**
+**In terminal:**
 ```
 cd web
 npx nodemon server.js
