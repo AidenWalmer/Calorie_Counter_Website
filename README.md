@@ -25,9 +25,9 @@ npx nodemon server.js
 ```
 
 ### Open the Calorie Capture Website:
-* Go to the search bar and copy/paste or type in the websites url
+* Copy/paste (Cntr c + Cntr v) or type in the website url into the search bar to open the site.
 
-**In browser:**
+**In Google Chrome:**
 ```
 http://localhost:8080/index.html
 ```
