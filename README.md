@@ -15,7 +15,10 @@ This website allows users to upload a picture of their plate to the site and the
 pip install -r requirements.txt
 ```
 
-**Starting the Server:**
+### Starting the Server:
+* Need to go into the web folder, then invoke server.js.
+
+** In terminal:**
 ```
 cd web
 npx nodemon server.js
